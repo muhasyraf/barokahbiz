@@ -2,15 +2,16 @@
 
     <div class="c-sidebar-brand d-md-down-none">
         <a class="c-sidebar-brand-full h4" href="#">
-        <center>
-                <img src="{{ asset('images/logoeasyterprise.png') }}" style="padding:0px 10px;margin: 0 auto;" width="70%" height="70%">
-        </center>
+            <center>
+                <img src="{{ asset('images/logobarokahbiz.png') }}" style="padding:0px 10px;margin: 0 auto;" width="50%"
+                    height="50%">
+            </center>
         </a>
     </div>
 
     <ul class="c-sidebar-nav">
         <li class="c-sidebar-nav-item">
-            <a href="{{ route("admin.home") }}" class="c-sidebar-nav-link">
+            <a href="{{ route('admin.home') }}" class="c-sidebar-nav-link">
                 <i class="c-sidebar-nav-icon fas fa-fw fa-tachometer-alt">
 
                 </i>
@@ -18,7 +19,8 @@
             </a>
         </li>
         @can('sales_marketing_access')
-            <li class="c-sidebar-nav-dropdown {{ request()->is("admin/sales-inquiries*") ? "c-show" : "" }} {{ request()->is("admin/sales-quotations*") ? "c-show" : "" }} {{ request()->is("admin/sales-orders*") ? "c-show" : "" }}">
+            <li
+                class="c-sidebar-nav-dropdown {{ request()->is('admin/sales-inquiries*') ? 'c-show' : '' }} {{ request()->is('admin/sales-quotations*') ? 'c-show' : '' }} {{ request()->is('admin/sales-orders*') ? 'c-show' : '' }}">
                 <a class="c-sidebar-nav-dropdown-toggle" href="#">
                     <i class="fa-fw fas fa-shopping-cart c-sidebar-nav-icon">
 
@@ -28,7 +30,8 @@
                 <ul class="c-sidebar-nav-dropdown-items">
                     @can('sales_inquiry_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.sales-inquiries.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/sales-inquiries") || request()->is("admin/sales-inquiries/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.sales-inquiries.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/sales-inquiries') || request()->is('admin/sales-inquiries/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-file c-sidebar-nav-icon">
 
                                 </i>
@@ -38,7 +41,8 @@
                     @endcan
                     @can('sales_quotation_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.sales-quotations.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/sales-quotations") || request()->is("admin/sales-quotations/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.sales-quotations.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/sales-quotations') || request()->is('admin/sales-quotations/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-quote-left c-sidebar-nav-icon">
 
                                 </i>
@@ -48,7 +52,8 @@
                     @endcan
                     @can('sales_order_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.sales-orders.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/sales-orders") || request()->is("admin/sales-orders/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.sales-orders.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/sales-orders') || request()->is('admin/sales-orders/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-file-alt c-sidebar-nav-icon">
 
                                 </i>
@@ -60,7 +65,8 @@
             </li>
         @endcan
         @can('product_management_access')
-            <li class="c-sidebar-nav-dropdown {{ request()->is("admin/products*") ? "c-show" : "" }} {{ request()->is("admin/request-stock-products*") ? "c-show" : "" }} {{ request()->is("admin/materials*") ? "c-show" : "" }} {{ request()->is("admin/purchase-requitions*") ? "c-show" : "" }} {{ request()->is("admin/product-categories*") ? "c-show" : "" }} {{ request()->is("admin/product-tags*") ? "c-show" : "" }}">
+            <li
+                class="c-sidebar-nav-dropdown {{ request()->is('admin/products*') ? 'c-show' : '' }} {{ request()->is('admin/request-stock-products*') ? 'c-show' : '' }} {{ request()->is('admin/materials*') ? 'c-show' : '' }} {{ request()->is('admin/purchase-requitions*') ? 'c-show' : '' }} {{ request()->is('admin/product-categories*') ? 'c-show' : '' }} {{ request()->is('admin/product-tags*') ? 'c-show' : '' }}">
                 <a class="c-sidebar-nav-dropdown-toggle" href="#">
                     <i class="fa-fw fas fa-database c-sidebar-nav-icon">
 
@@ -70,7 +76,8 @@
                 <ul class="c-sidebar-nav-dropdown-items">
                     @can('product_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.products.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/products") || request()->is("admin/products/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.products.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/products') || request()->is('admin/products/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-shopping-cart c-sidebar-nav-icon">
 
                                 </i>
@@ -80,7 +87,8 @@
                     @endcan
                     @can('request_stock_product_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.request-stock-products.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/request-stock-products") || request()->is("admin/request-stock-products/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.request-stock-products.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/request-stock-products') || request()->is('admin/request-stock-products/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-clipboard-list c-sidebar-nav-icon">
 
                                 </i>
@@ -90,7 +98,8 @@
                     @endcan
                     @can('material_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.materials.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/materials") || request()->is("admin/materials/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.materials.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/materials') || request()->is('admin/materials/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-box-open c-sidebar-nav-icon">
 
                                 </i>
@@ -100,7 +109,8 @@
                     @endcan
                     @can('purchase_requition_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.purchase-requitions.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/purchase-requitions") || request()->is("admin/purchase-requitions/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.purchase-requitions.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/purchase-requitions') || request()->is('admin/purchase-requitions/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-clipboard-list c-sidebar-nav-icon">
 
                                 </i>
@@ -110,7 +120,8 @@
                     @endcan
                     @can('product_category_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.product-categories.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/product-categories") || request()->is("admin/product-categories/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.product-categories.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/product-categories') || request()->is('admin/product-categories/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-folder c-sidebar-nav-icon">
 
                                 </i>
@@ -120,7 +131,8 @@
                     @endcan
                     @can('product_tag_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.product-tags.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/product-tags") || request()->is("admin/product-tags/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.product-tags.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/product-tags') || request()->is('admin/product-tags/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-folder c-sidebar-nav-icon">
 
                                 </i>
@@ -132,7 +144,8 @@
             </li>
         @endcan
         @can('basic_c_r_m_access')
-            <li class="c-sidebar-nav-dropdown {{ request()->is("admin/crm-customers*") ? "c-show" : "" }} {{ request()->is("admin/crm-statuses*") ? "c-show" : "" }} {{ request()->is("admin/crm-notes*") ? "c-show" : "" }} {{ request()->is("admin/crm-documents*") ? "c-show" : "" }}">
+            <li
+                class="c-sidebar-nav-dropdown {{ request()->is('admin/crm-customers*') ? 'c-show' : '' }} {{ request()->is('admin/crm-statuses*') ? 'c-show' : '' }} {{ request()->is('admin/crm-notes*') ? 'c-show' : '' }} {{ request()->is('admin/crm-documents*') ? 'c-show' : '' }}">
                 <a class="c-sidebar-nav-dropdown-toggle" href="#">
                     <i class="fa-fw fas fa-database c-sidebar-nav-icon">
 
@@ -142,7 +155,8 @@
                 <ul class="c-sidebar-nav-dropdown-items">
                     @can('crm_customer_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.crm-customers.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/crm-customers") || request()->is("admin/crm-customers/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.crm-customers.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/crm-customers') || request()->is('admin/crm-customers/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-user-plus c-sidebar-nav-icon">
 
                                 </i>
@@ -152,7 +166,8 @@
                     @endcan
                     @can('crm_status_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.crm-statuses.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/crm-statuses") || request()->is("admin/crm-statuses/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.crm-statuses.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/crm-statuses') || request()->is('admin/crm-statuses/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-folder c-sidebar-nav-icon">
 
                                 </i>
@@ -162,7 +177,8 @@
                     @endcan
                     @can('crm_note_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.crm-notes.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/crm-notes") || request()->is("admin/crm-notes/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.crm-notes.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/crm-notes') || request()->is('admin/crm-notes/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-sticky-note c-sidebar-nav-icon">
 
                                 </i>
@@ -172,7 +188,8 @@
                     @endcan
                     @can('crm_document_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.crm-documents.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/crm-documents") || request()->is("admin/crm-documents/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.crm-documents.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/crm-documents') || request()->is('admin/crm-documents/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-folder c-sidebar-nav-icon">
 
                                 </i>
@@ -184,7 +201,8 @@
             </li>
         @endcan
         @can('warehouse_access')
-            <li class="c-sidebar-nav-dropdown {{ request()->is("admin/material-entries*") ? "c-show" : "" }} {{ request()->is("admin/transfer-produks*") ? "c-show" : "" }} {{ request()->is("admin/transfer-materials*") ? "c-show" : "" }} {{ request()->is("admin/pengirimen*") ? "c-show" : "" }}">
+            <li
+                class="c-sidebar-nav-dropdown {{ request()->is('admin/material-entries*') ? 'c-show' : '' }} {{ request()->is('admin/transfer-produks*') ? 'c-show' : '' }} {{ request()->is('admin/transfer-materials*') ? 'c-show' : '' }} {{ request()->is('admin/pengirimen*') ? 'c-show' : '' }}">
                 <a class="c-sidebar-nav-dropdown-toggle" href="#">
                     <i class="fa-fw fas fa-warehouse c-sidebar-nav-icon">
 
@@ -194,7 +212,8 @@
                 <ul class="c-sidebar-nav-dropdown-items">
                     @can('material_entry_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.material-entries.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/material-entries") || request()->is("admin/material-entries/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.material-entries.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/material-entries') || request()->is('admin/material-entries/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-cogs c-sidebar-nav-icon">
 
                                 </i>
@@ -204,7 +223,8 @@
                     @endcan
                     @can('transfer_produk_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.transfer-produks.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/transfer-produks") || request()->is("admin/transfer-produks/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.transfer-produks.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/transfer-produks') || request()->is('admin/transfer-produks/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-exchange-alt c-sidebar-nav-icon">
 
                                 </i>
@@ -214,7 +234,8 @@
                     @endcan
                     @can('transfer_material_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.transfer-materials.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/transfer-materials") || request()->is("admin/transfer-materials/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.transfer-materials.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/transfer-materials') || request()->is('admin/transfer-materials/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-exchange-alt c-sidebar-nav-icon">
 
                                 </i>
@@ -224,7 +245,8 @@
                     @endcan
                     @can('pengiriman_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.pengirimen.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/pengirimen") || request()->is("admin/pengirimen/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.pengirimen.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/pengirimen') || request()->is('admin/pengirimen/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-shipping-fast c-sidebar-nav-icon">
 
                                 </i>
@@ -236,7 +258,8 @@
             </li>
         @endcan
         @can('task_management_access')
-            <li class="c-sidebar-nav-dropdown {{ request()->is("admin/tasks-calendars*") ? "c-show" : "" }} {{ request()->is("admin/tasks*") ? "c-show" : "" }} {{ request()->is("admin/list-of-materials*") ? "c-show" : "" }} {{ request()->is("admin/production-monitorings*") ? "c-show" : "" }} {{ request()->is("admin/quality-controls*") ? "c-show" : "" }} {{ request()->is("admin/machine-reports*") ? "c-show" : "" }} {{ request()->is("admin/task-statuses*") ? "c-show" : "" }} {{ request()->is("admin/task-tags*") ? "c-show" : "" }}">
+            <li
+                class="c-sidebar-nav-dropdown {{ request()->is('admin/tasks-calendars*') ? 'c-show' : '' }} {{ request()->is('admin/tasks*') ? 'c-show' : '' }} {{ request()->is('admin/list-of-materials*') ? 'c-show' : '' }} {{ request()->is('admin/production-monitorings*') ? 'c-show' : '' }} {{ request()->is('admin/quality-controls*') ? 'c-show' : '' }} {{ request()->is('admin/machine-reports*') ? 'c-show' : '' }} {{ request()->is('admin/task-statuses*') ? 'c-show' : '' }} {{ request()->is('admin/task-tags*') ? 'c-show' : '' }}">
                 <a class="c-sidebar-nav-dropdown-toggle" href="#">
                     <i class="fa-fw fas fa-list c-sidebar-nav-icon">
 
@@ -246,7 +269,8 @@
                 <ul class="c-sidebar-nav-dropdown-items">
                     @can('tasks_calendar_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.tasks-calendars.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/tasks-calendars") || request()->is("admin/tasks-calendars/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.tasks-calendars.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/tasks-calendars') || request()->is('admin/tasks-calendars/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-calendar c-sidebar-nav-icon">
 
                                 </i>
@@ -256,7 +280,8 @@
                     @endcan
                     @can('task_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.tasks.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/tasks") || request()->is("admin/tasks/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.tasks.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/tasks') || request()->is('admin/tasks/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-briefcase c-sidebar-nav-icon">
 
                                 </i>
@@ -266,7 +291,8 @@
                     @endcan
                     @can('list_of_material_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.list-of-materials.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/list-of-materials") || request()->is("admin/list-of-materials/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.list-of-materials.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/list-of-materials') || request()->is('admin/list-of-materials/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw far fa-list-alt c-sidebar-nav-icon">
 
                                 </i>
@@ -276,7 +302,8 @@
                     @endcan
                     @can('production_monitoring_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.production-monitorings.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/production-monitorings") || request()->is("admin/production-monitorings/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.production-monitorings.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/production-monitorings') || request()->is('admin/production-monitorings/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-cogs c-sidebar-nav-icon">
 
                                 </i>
@@ -286,7 +313,8 @@
                     @endcan
                     @can('quality_control_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.quality-controls.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/quality-controls") || request()->is("admin/quality-controls/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.quality-controls.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/quality-controls') || request()->is('admin/quality-controls/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-cogs c-sidebar-nav-icon">
 
                                 </i>
@@ -296,7 +324,8 @@
                     @endcan
                     @can('machine_report_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.machine-reports.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/machine-reports") || request()->is("admin/machine-reports/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.machine-reports.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/machine-reports') || request()->is('admin/machine-reports/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-hdd c-sidebar-nav-icon">
 
                                 </i>
@@ -306,7 +335,8 @@
                     @endcan
                     @can('task_status_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.task-statuses.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/task-statuses") || request()->is("admin/task-statuses/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.task-statuses.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/task-statuses') || request()->is('admin/task-statuses/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-server c-sidebar-nav-icon">
 
                                 </i>
@@ -316,7 +346,8 @@
                     @endcan
                     @can('task_tag_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.task-tags.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/task-tags") || request()->is("admin/task-tags/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.task-tags.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/task-tags') || request()->is('admin/task-tags/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-server c-sidebar-nav-icon">
 
                                 </i>
@@ -328,7 +359,8 @@
             </li>
         @endcan
         @can('procurement_access')
-            <li class="c-sidebar-nav-dropdown {{ request()->is("admin/request-for-quotations*") ? "c-show" : "" }} {{ request()->is("admin/purchase-inqs*") ? "c-show" : "" }} {{ request()->is("admin/purchase-orders*") ? "c-show" : "" }} {{ request()->is("admin/purchase-returns*") ? "c-show" : "" }}">
+            <li
+                class="c-sidebar-nav-dropdown {{ request()->is('admin/request-for-quotations*') ? 'c-show' : '' }} {{ request()->is('admin/purchase-inqs*') ? 'c-show' : '' }} {{ request()->is('admin/purchase-orders*') ? 'c-show' : '' }} {{ request()->is('admin/purchase-returns*') ? 'c-show' : '' }}">
                 <a class="c-sidebar-nav-dropdown-toggle" href="#">
                     <i class="fa-fw fas fa-box c-sidebar-nav-icon">
 
@@ -338,7 +370,8 @@
                 <ul class="c-sidebar-nav-dropdown-items">
                     @can('request_for_quotation_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.request-for-quotations.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/request-for-quotations") || request()->is("admin/request-for-quotations/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.request-for-quotations.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/request-for-quotations') || request()->is('admin/request-for-quotations/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-braille c-sidebar-nav-icon">
 
                                 </i>
@@ -348,7 +381,8 @@
                     @endcan
                     @can('purchase_inq_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.purchase-inqs.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/purchase-inqs") || request()->is("admin/purchase-inqs/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.purchase-inqs.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/purchase-inqs') || request()->is('admin/purchase-inqs/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw far fa-list-alt c-sidebar-nav-icon">
 
                                 </i>
@@ -358,7 +392,8 @@
                     @endcan
                     @can('purchase_order_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.purchase-orders.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/purchase-orders") || request()->is("admin/purchase-orders/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.purchase-orders.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/purchase-orders') || request()->is('admin/purchase-orders/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-shopping-basket c-sidebar-nav-icon">
 
                                 </i>
@@ -368,7 +403,8 @@
                     @endcan
                     @can('purchase_return_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.purchase-returns.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/purchase-returns") || request()->is("admin/purchase-returns/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.purchase-returns.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/purchase-returns') || request()->is('admin/purchase-returns/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-undo c-sidebar-nav-icon">
 
                                 </i>
@@ -380,7 +416,8 @@
             </li>
         @endcan
         @can('data_vendor_access')
-            <li class="c-sidebar-nav-dropdown {{ request()->is("admin/vendors*") ? "c-show" : "" }} {{ request()->is("admin/purchase-quotations*") ? "c-show" : "" }} {{ request()->is("admin/vendor-statuses*") ? "c-show" : "" }} {{ request()->is("admin/notes-vendors*") ? "c-show" : "" }} {{ request()->is("admin/documents-vendors*") ? "c-show" : "" }}">
+            <li
+                class="c-sidebar-nav-dropdown {{ request()->is('admin/vendors*') ? 'c-show' : '' }} {{ request()->is('admin/purchase-quotations*') ? 'c-show' : '' }} {{ request()->is('admin/vendor-statuses*') ? 'c-show' : '' }} {{ request()->is('admin/notes-vendors*') ? 'c-show' : '' }} {{ request()->is('admin/documents-vendors*') ? 'c-show' : '' }}">
                 <a class="c-sidebar-nav-dropdown-toggle" href="#">
                     <i class="fa-fw fas fa-gem c-sidebar-nav-icon">
 
@@ -390,7 +427,8 @@
                 <ul class="c-sidebar-nav-dropdown-items">
                     @can('vendor_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.vendors.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/vendors") || request()->is("admin/vendors/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.vendors.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/vendors') || request()->is('admin/vendors/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-cogs c-sidebar-nav-icon">
 
                                 </i>
@@ -400,7 +438,8 @@
                     @endcan
                     @can('purchase_quotation_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.purchase-quotations.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/purchase-quotations") || request()->is("admin/purchase-quotations/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.purchase-quotations.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/purchase-quotations') || request()->is('admin/purchase-quotations/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-quote-left c-sidebar-nav-icon">
 
                                 </i>
@@ -410,7 +449,8 @@
                     @endcan
                     @can('vendor_status_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.vendor-statuses.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/vendor-statuses") || request()->is("admin/vendor-statuses/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.vendor-statuses.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/vendor-statuses') || request()->is('admin/vendor-statuses/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-folder c-sidebar-nav-icon">
 
                                 </i>
@@ -420,7 +460,8 @@
                     @endcan
                     @can('notes_vendor_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.notes-vendors.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/notes-vendors") || request()->is("admin/notes-vendors/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.notes-vendors.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/notes-vendors') || request()->is('admin/notes-vendors/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-sticky-note c-sidebar-nav-icon">
 
                                 </i>
@@ -430,7 +471,8 @@
                     @endcan
                     @can('documents_vendor_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.documents-vendors.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/documents-vendors") || request()->is("admin/documents-vendors/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.documents-vendors.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/documents-vendors') || request()->is('admin/documents-vendors/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-folder c-sidebar-nav-icon">
 
                                 </i>
@@ -442,7 +484,8 @@
             </li>
         @endcan
         @can('finance_access')
-            <li class="c-sidebar-nav-dropdown {{ request()->is("admin/sales-invoices*") ? "c-show" : "" }} {{ request()->is("admin/purchase-invoices*") ? "c-show" : "" }} {{ request()->is("admin/chart-of-accounts*") ? "c-show" : "" }} {{ request()->is("admin/buku-besars*") ? "c-show" : "" }} {{ request()->is("admin/jurnal-umums*") ? "c-show" : "" }} {{ request()->is("admin/necara-saldos*") ? "c-show" : "" }} {{ request()->is("admin/jurnal-penyelesaians*") ? "c-show" : "" }}">
+            <li
+                class="c-sidebar-nav-dropdown {{ request()->is('admin/sales-invoices*') ? 'c-show' : '' }} {{ request()->is('admin/purchase-invoices*') ? 'c-show' : '' }} {{ request()->is('admin/chart-of-accounts*') ? 'c-show' : '' }} {{ request()->is('admin/buku-besars*') ? 'c-show' : '' }} {{ request()->is('admin/jurnal-umums*') ? 'c-show' : '' }} {{ request()->is('admin/necara-saldos*') ? 'c-show' : '' }} {{ request()->is('admin/jurnal-penyelesaians*') ? 'c-show' : '' }}">
                 <a class="c-sidebar-nav-dropdown-toggle" href="#">
                     <i class="fa-fw fas fa-hand-holding-usd c-sidebar-nav-icon">
 
@@ -452,7 +495,8 @@
                 <ul class="c-sidebar-nav-dropdown-items">
                     @can('sales_invoice_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.sales-invoices.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/sales-invoices") || request()->is("admin/sales-invoices/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.sales-invoices.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/sales-invoices') || request()->is('admin/sales-invoices/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-file-invoice-dollar c-sidebar-nav-icon">
 
                                 </i>
@@ -462,7 +506,8 @@
                     @endcan
                     @can('purchase_invoice_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.purchase-invoices.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/purchase-invoices") || request()->is("admin/purchase-invoices/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.purchase-invoices.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/purchase-invoices') || request()->is('admin/purchase-invoices/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-file-invoice c-sidebar-nav-icon">
 
                                 </i>
@@ -472,7 +517,8 @@
                     @endcan
                     @can('chart_of_account_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.chart-of-accounts.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/chart-of-accounts") || request()->is("admin/chart-of-accounts/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.chart-of-accounts.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/chart-of-accounts') || request()->is('admin/chart-of-accounts/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-cogs c-sidebar-nav-icon">
 
                                 </i>
@@ -482,7 +528,8 @@
                     @endcan
                     @can('buku_besar_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.buku-besars.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/buku-besars") || request()->is("admin/buku-besars/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.buku-besars.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/buku-besars') || request()->is('admin/buku-besars/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-book-open c-sidebar-nav-icon">
 
                                 </i>
@@ -492,7 +539,8 @@
                     @endcan
                     @can('jurnal_umum_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.jurnal-umums.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/jurnal-umums") || request()->is("admin/jurnal-umums/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.jurnal-umums.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/jurnal-umums') || request()->is('admin/jurnal-umums/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-cogs c-sidebar-nav-icon">
 
                                 </i>
@@ -502,7 +550,8 @@
                     @endcan
                     @can('necara_saldo_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.necara-saldos.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/necara-saldos") || request()->is("admin/necara-saldos/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.necara-saldos.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/necara-saldos') || request()->is('admin/necara-saldos/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-balance-scale c-sidebar-nav-icon">
 
                                 </i>
@@ -512,7 +561,8 @@
                     @endcan
                     @can('jurnal_penyelesaian_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.jurnal-penyelesaians.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/jurnal-penyelesaians") || request()->is("admin/jurnal-penyelesaians/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.jurnal-penyelesaians.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/jurnal-penyelesaians') || request()->is('admin/jurnal-penyelesaians/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-cogs c-sidebar-nav-icon">
 
                                 </i>
@@ -524,7 +574,8 @@
             </li>
         @endcan
         @can('expense_management_access')
-            <li class="c-sidebar-nav-dropdown {{ request()->is("admin/expense-categories*") ? "c-show" : "" }} {{ request()->is("admin/income-categories*") ? "c-show" : "" }} {{ request()->is("admin/expenses*") ? "c-show" : "" }} {{ request()->is("admin/incomes*") ? "c-show" : "" }} {{ request()->is("admin/expense-reports*") ? "c-show" : "" }}">
+            <li
+                class="c-sidebar-nav-dropdown {{ request()->is('admin/expense-categories*') ? 'c-show' : '' }} {{ request()->is('admin/income-categories*') ? 'c-show' : '' }} {{ request()->is('admin/expenses*') ? 'c-show' : '' }} {{ request()->is('admin/incomes*') ? 'c-show' : '' }} {{ request()->is('admin/expense-reports*') ? 'c-show' : '' }}">
                 <a class="c-sidebar-nav-dropdown-toggle" href="#">
                     <i class="fa-fw fas fa-money-check-alt c-sidebar-nav-icon">
 
@@ -534,7 +585,8 @@
                 <ul class="c-sidebar-nav-dropdown-items">
                     @can('expense_category_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.expense-categories.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/expense-categories") || request()->is("admin/expense-categories/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.expense-categories.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/expense-categories') || request()->is('admin/expense-categories/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-list c-sidebar-nav-icon">
 
                                 </i>
@@ -544,7 +596,8 @@
                     @endcan
                     @can('income_category_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.income-categories.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/income-categories") || request()->is("admin/income-categories/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.income-categories.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/income-categories') || request()->is('admin/income-categories/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-list c-sidebar-nav-icon">
 
                                 </i>
@@ -554,7 +607,8 @@
                     @endcan
                     @can('expense_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.expenses.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/expenses") || request()->is("admin/expenses/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.expenses.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/expenses') || request()->is('admin/expenses/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-arrow-circle-right c-sidebar-nav-icon">
 
                                 </i>
@@ -564,7 +618,8 @@
                     @endcan
                     @can('income_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.incomes.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/incomes") || request()->is("admin/incomes/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.incomes.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/incomes') || request()->is('admin/incomes/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-arrow-circle-right c-sidebar-nav-icon">
 
                                 </i>
@@ -574,7 +629,8 @@
                     @endcan
                     @can('expense_report_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.expense-reports.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/expense-reports") || request()->is("admin/expense-reports/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.expense-reports.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/expense-reports') || request()->is('admin/expense-reports/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-chart-line c-sidebar-nav-icon">
 
                                 </i>
@@ -586,9 +642,10 @@
             </li>
         @endcan
         @can('user_management_access')
-            <li class="c-sidebar-nav-dropdown {{ request()->is("admin/permissions*") ? "c-show" : "" }} {{ request()->is("admin/roles*") ? "c-show" : "" }} {{ request()->is("admin/users*") ? "c-show" : "" }} {{ request()->is("admin/audit-logs*") ? "c-show" : "" }}">
+            <li
+                class="c-sidebar-nav-dropdown {{ request()->is('admin/permissions*') ? 'c-show' : '' }} {{ request()->is('admin/roles*') ? 'c-show' : '' }} {{ request()->is('admin/users*') ? 'c-show' : '' }} {{ request()->is('admin/audit-logs*') ? 'c-show' : '' }}">
                 <a class="c-sidebar-nav-dropdown-toggle" href="#">
-                    <i class="fa-fw fas fa-users c-sidebar-nav-icon">
+                    <i class="fa-fw fas fa-address-card c-sidebar-nav-icon">
 
                     </i>
                     {{ trans('cruds.userManagement.title') }}
@@ -596,7 +653,8 @@
                 <ul class="c-sidebar-nav-dropdown-items">
                     @can('permission_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.permissions.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/permissions") || request()->is("admin/permissions/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.permissions.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/permissions') || request()->is('admin/permissions/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-unlock-alt c-sidebar-nav-icon">
 
                                 </i>
@@ -606,7 +664,8 @@
                     @endcan
                     @can('role_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.roles.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/roles") || request()->is("admin/roles/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.roles.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/roles') || request()->is('admin/roles/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-briefcase c-sidebar-nav-icon">
 
                                 </i>
@@ -616,7 +675,8 @@
                     @endcan
                     @can('user_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.users.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/users") || request()->is("admin/users/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.users.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/users') || request()->is('admin/users/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-user c-sidebar-nav-icon">
 
                                 </i>
@@ -626,7 +686,8 @@
                     @endcan
                     @can('audit_log_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.audit-logs.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/audit-logs") || request()->is("admin/audit-logs/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.audit-logs.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/audit-logs') || request()->is('admin/audit-logs/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-file-alt c-sidebar-nav-icon">
 
                                 </i>
@@ -637,9 +698,22 @@
                 </ul>
             </li>
         @endcan
+        @can('user_management_access')
+        <li
+            class="c-sidebar-nav-dropdown {{ request()->is('admin/permissions*') ? 'c-show' : '' }} {{ request()->is('admin/roles*') ? 'c-show' : '' }} {{ request()->is('admin/users*') ? 'c-show' : '' }} {{ request()->is('admin/audit-logs*') ? 'c-show' : '' }}">
+            <a class="c-sidebar-nav-dropdown-toggle" href="#">
+                <i class="fa-fw fas fa-users c-sidebar-nav-icon">
+
+                </i>
+                {{ trans('cruds.humanResources.title') }}
+            </a>
+            
+        </li>
+    @endcan
         @can('user_alert_access')
             <li class="c-sidebar-nav-item">
-                <a href="{{ route("admin.user-alerts.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/user-alerts") || request()->is("admin/user-alerts/*") ? "c-active" : "" }}">
+                <a href="{{ route('admin.user-alerts.index') }}"
+                    class="c-sidebar-nav-link {{ request()->is('admin/user-alerts') || request()->is('admin/user-alerts/*') ? 'c-active' : '' }}">
                     <i class="fa-fw fas fa-bell c-sidebar-nav-icon">
 
                     </i>
@@ -648,7 +722,8 @@
             </li>
         @endcan
         @can('faq_management_access')
-            <li class="c-sidebar-nav-dropdown {{ request()->is("admin/faq-categories*") ? "c-show" : "" }} {{ request()->is("admin/faq-questions*") ? "c-show" : "" }}">
+            <li
+                class="c-sidebar-nav-dropdown {{ request()->is('admin/faq-categories*') ? 'c-show' : '' }} {{ request()->is('admin/faq-questions*') ? 'c-show' : '' }}">
                 <a class="c-sidebar-nav-dropdown-toggle" href="#">
                     <i class="fa-fw fas fa-question c-sidebar-nav-icon">
 
@@ -658,7 +733,8 @@
                 <ul class="c-sidebar-nav-dropdown-items">
                     @can('faq_category_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.faq-categories.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/faq-categories") || request()->is("admin/faq-categories/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.faq-categories.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/faq-categories') || request()->is('admin/faq-categories/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-briefcase c-sidebar-nav-icon">
 
                                 </i>
@@ -668,7 +744,8 @@
                     @endcan
                     @can('faq_question_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.faq-questions.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/faq-questions") || request()->is("admin/faq-questions/*") ? "c-active" : "" }}">
+                            <a href="{{ route('admin.faq-questions.index') }}"
+                                class="c-sidebar-nav-link {{ request()->is('admin/faq-questions') || request()->is('admin/faq-questions/*') ? 'c-active' : '' }}">
                                 <i class="fa-fw fas fa-question c-sidebar-nav-icon">
 
                                 </i>
@@ -680,37 +757,40 @@
             </li>
         @endcan
         @php($unread = \App\Models\QaTopic::unreadCount())
-            <li class="c-sidebar-nav-item">
-                <a href="{{ route("admin.messenger.index") }}" class="{{ request()->is("admin/messenger") || request()->is("admin/messenger/*") ? "c-active" : "" }} c-sidebar-nav-link">
-                    <i class="c-sidebar-nav-icon fa-fw fa fa-envelope">
+        <li class="c-sidebar-nav-item">
+            <a href="{{ route('admin.messenger.index') }}"
+                class="{{ request()->is('admin/messenger') || request()->is('admin/messenger/*') ? 'c-active' : '' }} c-sidebar-nav-link">
+                <i class="c-sidebar-nav-icon fa-fw fa fa-envelope">
 
-                    </i>
-                    <span>{{ trans('global.messages') }}</span>
-                    @if($unread > 0)
-                        <strong>( {{ $unread }} )</strong>
-                    @endif
+                </i>
+                <span>{{ trans('global.messages') }}</span>
+                @if ($unread > 0)
+                    <strong>( {{ $unread }} )</strong>
+                @endif
 
-                </a>
-            </li>
-            @if(file_exists(app_path('Http/Controllers/Auth/ChangePasswordController.php')))
-                @can('profile_password_edit')
-                    <li class="c-sidebar-nav-item">
-                        <a class="c-sidebar-nav-link {{ request()->is('profile/password') || request()->is('profile/password/*') ? 'c-active' : '' }}" href="{{ route('profile.password.edit') }}">
-                            <i class="fa-fw fas fa-key c-sidebar-nav-icon">
-                            </i>
-                            {{ trans('global.change_password') }}
-                        </a>
-                    </li>
-                @endcan
-            @endif
-            <li class="c-sidebar-nav-item">
-                <a href="#" class="c-sidebar-nav-link" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
-                    <i class="c-sidebar-nav-icon fas fa-fw fa-sign-out-alt">
+            </a>
+        </li>
+        @if (file_exists(app_path('Http/Controllers/Auth/ChangePasswordController.php')))
+            @can('profile_password_edit')
+                <li class="c-sidebar-nav-item">
+                    <a class="c-sidebar-nav-link {{ request()->is('profile/password') || request()->is('profile/password/*') ? 'c-active' : '' }}"
+                        href="{{ route('profile.password.edit') }}">
+                        <i class="fa-fw fas fa-key c-sidebar-nav-icon">
+                        </i>
+                        {{ trans('global.change_password') }}
+                    </a>
+                </li>
+            @endcan
+        @endif
+        <li class="c-sidebar-nav-item">
+            <a href="#" class="c-sidebar-nav-link"
+                onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
+                <i class="c-sidebar-nav-icon fas fa-fw fa-sign-out-alt">
 
-                    </i>
-                    {{ trans('global.logout') }}
-                </a>
-            </li>
+                </i>
+                {{ trans('global.logout') }}
+            </a>
+        </li>
     </ul>
 
 </div>

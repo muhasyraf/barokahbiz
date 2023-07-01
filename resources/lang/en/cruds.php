@@ -1,9 +1,13 @@
 <?php
 
 return [
+    'humanResources' => [
+        'title'          => 'Human Resources',
+        'title_singular' => 'Human Resources',
+    ],
     'userManagement' => [
-        'title'          => 'User management',
-        'title_singular' => 'User management',
+        'title'          => 'User Management',
+        'title_singular' => 'User Management',
     ],
     'permission' => [
         'title'          => 'Permissions',

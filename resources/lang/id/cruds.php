@@ -1,6 +1,10 @@
 <?php
 
 return [
+    'humanResources' => [
+        'title'          => 'Sumber Daya Manusia',
+        'title_singular' => 'Sumber Daya Manusia',
+    ],
     'userManagement' => [
         'title'          => 'Manajemen User',
         'title_singular' => 'Manajemen User',

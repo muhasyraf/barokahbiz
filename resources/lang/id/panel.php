@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'site_title' => 'Easyterprise PT. Yakult',
+    'site_title' => 'Barokah Biz',
 ];
