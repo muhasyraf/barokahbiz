@@ -707,7 +707,37 @@
                 </i>
                 {{ trans('cruds.humanResources.title') }}
             </a>
-            
+            <ul class="c-sidebar-nav-dropdown-items">
+                @can('department_access')
+                    <li class="c-sidebar-nav-item">
+                        <a href="{{ route('admin.departments.index') }}"
+                            class="c-sidebar-nav-link {{ request()->is('admin/departments') || request()->is('admin/departments/*') ? 'c-active' : '' }}">
+                            <i class="fa-fw fas fa-folder c-sidebar-nav-icon">
+
+                            </i>
+                            {{ trans('cruds.department.title') }}
+                        </a>
+                    </li>
+                    <li class="c-sidebar-nav-item">
+                        <a href="{{ route('admin.designations.index') }}"
+                            class="c-sidebar-nav-link {{ request()->is('admin/designations') || request()->is('admin/designations/*') ? 'c-active' : '' }}">
+                            <i class="fa-fw fas fa-briefcase c-sidebar-nav-icon">
+
+                            </i>
+                            {{ trans('cruds.designation.title') }}
+                        </a>
+                    </li>
+                    <li class="c-sidebar-nav-item">
+                        <a href="{{ route('admin.employees.index') }}"
+                            class="c-sidebar-nav-link {{ request()->is('admin/employees') || request()->is('admin/employees/*') ? 'c-active' : '' }}">
+                            <i class="fa-fw fas fa-user c-sidebar-nav-icon">
+
+                            </i>
+                            {{ trans('cruds.employee.title') }}
+                        </a>
+                    </li>
+                @endcan
+            </ul>
         </li>
     @endcan
         @can('user_alert_access')

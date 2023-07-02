@@ -1,7 +1,9 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+
 
 Route::redirect('/', '/login');
 Route::get('/home', function () {
@@ -127,6 +129,24 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::post('crm-customers/parse-csv-import', 'CrmCustomerController@parseCsvImport')->name('crm-customers.parseCsvImport');
     Route::post('crm-customers/process-csv-import', 'CrmCustomerController@processCsvImport')->name('crm-customers.processCsvImport');
     Route::resource('crm-customers', 'CrmCustomerController');
+
+    // Department
+    Route::delete('departments/destroy', 'DepartmentController@Destroy')->name('departments.massDestroy');
+    Route::post('departments/parse-csv-import', 'DepartmentController@parseCsvImport')->name('departments.parseCsvImport');
+    Route::post('departments/process-csv-import', 'DepartmentController@processCsvImport')->name('departments.processCsvImport');
+    Route::resource('departments', 'DepartmentController');
+
+    // Designation
+    Route::delete('designations/destroy', 'DesignationController@Destroy')->name('designations.massDestroy');
+    Route::post('designations/parse-csv-import', 'DesignationController@parseCsvImport')->name('designations.parseCsvImport');
+    Route::post('designations/process-csv-import', 'DesignationController@processCsvImport')->name('designations.processCsvImport');
+    Route::resource('designations', 'DesignationController');
+
+    // Employee
+    Route::delete('employees/destroy', 'EmployeeController@Destroy')->name('employees.massDestroy');
+    Route::post('employees/parse-csv-import', 'EmployeeController@parseCsvImport')->name('employees.parseCsvImport');
+    Route::post('employees/process-csv-import', 'EmployeeController@processCsvImport')->name('employees.processCsvImport');
+    Route::resource('employees', 'EmployeeController');
 
     // Crm Note
     Route::delete('crm-notes/destroy', 'CrmNoteController@massDestroy')->name('crm-notes.massDestroy');

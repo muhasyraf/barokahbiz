@@ -11,7 +11,7 @@
                     {{ csrf_field() }}
 
                     <h1>            <center>
-                        <img src="{{ asset('images/logoeasyterprise.png') }}" style="padding:0px 10px;margin: 0 auto;" width="70%" height="70%">
+                        <img src="{{ asset('images/logobarokahbiz.png') }}" style="padding:0px 10px;margin: 0 auto;" width="70%" height="70%">
                 </center></h1>
                     <h4 class="text-muted text-center pt-2 pb-2">{{ trans('global.register') }}</h4>
                     

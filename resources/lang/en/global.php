@@ -187,6 +187,8 @@ return [
     'customer'                       => 'Customer',
     'customers'                      => 'Customers',
     'deleted_at'                     => 'Deleted at',
+    'department'                     => 'Department',
+    'departments'                    => 'Departments',
     'description'                    => 'Description',
     'deselect_all'                   => 'Deselect all',
     'discount_amount'                => 'Discount amount',
