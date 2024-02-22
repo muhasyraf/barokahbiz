@@ -128,7 +128,9 @@ class EmployeeController extends Controller
     public function edit($id)
     {
         $employee = Employee::find($id);
-        return view('admin.employees.edit', ['employee' => $employee]);
+        $designations = Designation::get();
+        $departments = Department::get();
+        return view('admin.employees.edit', compact('employee','designations','departments'));
     }
 
     /**

@@ -144,9 +144,17 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
     // Employee
     Route::delete('employees/destroy', 'EmployeeController@Destroy')->name('employees.massDestroy');
-    Route::post('employees/parse-csv-import', 'EmployeeController@parseCsvImport')->name('employees.parseCsvImport');
+    Route::post('employee/parse-csv-import', 'EmployeeController@parseCsvImport')->name('employees.parseCsvImport');
     Route::post('employees/process-csv-import', 'EmployeeController@processCsvImport')->name('employees.processCsvImport');
     Route::resource('employees', 'EmployeeController');
+
+    // Employee Attendace
+    Route::delete('employee-attendances/destroy', 'EmployeeAttendanceController@Destroy')->name('employee-attendances.massDestroy');
+    Route::post('employee-attendances/parse-csv-import', 'EmployeeAttendanceController@parseCsvImport')->name('employee-attendances.parseCsvImport');
+    Route::post('employee-attendances/process-csv-import', 'EmployeeAttendanceController@processCsvImport')->name('employee-attendances.processCsvImport');
+    Route::resource('employee-attendances', 'EmployeeAttendanceController');
+    Route::get('settings/attendance',[SettingsController::class,'attendance'])->name('settings.attendance');
+    // Route::post('settings/attendance',[SettingsController::class,'updateAttendance']);
 
     // Crm Note
     Route::delete('crm-notes/destroy', 'CrmNoteController@massDestroy')->name('crm-notes.massDestroy');

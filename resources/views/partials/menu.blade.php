@@ -736,6 +736,15 @@
                             {{ trans('cruds.employee.title') }}
                         </a>
                     </li>
+                    <li class="c-sidebar-nav-item">
+                        <a href="{{ route('admin.employee-attendances.index') }}"
+                            class="c-sidebar-nav-link {{ request()->is('admin/employee-attendances') || request()->is('admin/employee-attendances/*') ? 'c-active' : '' }}">
+                            <i class="fa-fw fas fa-user c-sidebar-nav-icon">
+
+                            </i>
+                            {{ trans('cruds.employeeAttendance.title') }}
+                        </a>
+                    </li>
                 @endcan
             </ul>
         </li>
